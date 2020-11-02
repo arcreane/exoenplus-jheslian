@@ -3,7 +3,6 @@ public class UserInputArrays {
     public static int i, j, k;
     public static void identicalNumbers() {
         int [][] array= new int[3][5];
-
         boolean error=false;
         boolean duplicate=false;
         Scanner in = new Scanner( System.in );
@@ -57,15 +56,20 @@ public class UserInputArrays {
                             System.out.println("Duplicate Number " +array[0][i]+ " at indexes");
                             System.out.println("------> index " +i+ " of array 1");
                             System.out.println("------> index " +j+ " of array 2");
-                            System.out.println("------> index " +k+ " of array 3");
+                            System.out.println("------> index " +k+ " of array 3\n");
                         }
                         duplicate=true;
-
                     }
                 }
             }
         }
+        System.out.println();
         if (!duplicate)
             System.out.println("There's no identical numbers on your 3 arrays");
+
+        System.out.println("Enter 0 to go back to menu");
+        int exit = in.nextInt();
+            if (exit==0)
+                Menu.main(null);
     }
 }
