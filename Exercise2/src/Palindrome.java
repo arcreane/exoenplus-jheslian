@@ -8,7 +8,9 @@ public class Palindrome {
         Scanner in = new Scanner( System.in );
         while (true) {
             System.out.println( "Enter a Palindrome word" );
-            word = in.nextLine();
+            String newWord = in.nextLine();
+            word = newWord.trim();
+
             if (word.equals("0"))
                 Menu.main(null);
 
